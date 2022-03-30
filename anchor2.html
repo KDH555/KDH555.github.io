@@ -3,10 +3,6 @@
 <style>
   header, nav, section, article, aside, footer
   {border:1px solid gray; margin:5px; padding:8px; width:1000px;}
-  header h2 { float:left; border:solid 1px gray; margin:0 0 0 0; }
-  header #headMenu { float:right; border:solid 1px gray; margin:20px 0 0 0; }
-  header ul {margin:0; padding:0;}
-  header ul li {display:inline; margin:5px;}
   header img { width:990px; height:200px; }
   section {width:1000px; float:left; }
   section section {width:975px; float:left; }
@@ -20,21 +16,17 @@
   a:active {  color:blue; background-color:transparent; text-decoration:none; }
 </style>
 <title>시멘틱 학습</title></head>
-
 <body>
   <header>
-    <h2><a href="https://drkdhong.github.io/2/basicSemantic4.html">실습을 환영합니다</a></h2>
-	<ul  id="headMenu">
-	  <li>로그인|</li><li><a href="https://drkdhong.github.io/2/basicSemanticMember1.html">회원가입</a>|</li><li>사이트맵</li></ul>
+    <h2>실습을 환영합니다</h2>
     <img src="../images/scene.png" alt="히말라야"/>
   </header>
   <nav>
-    <ul>
-    <li><a href="https://www.w3.org/TR/html5/"  target="_blank">HTML5</a></li>
-    <li><a href="http://jquery.com/"  target="_blank">jQuery</a></li>
-    <li><a href="https://jquerymobile.com/"  target="_blank">jQuery Mobile</a></li>
-    <li><a href="../jsp/jspintro.html">JSP</a></li></ul>
-  </nav>
+	  <ul>
+		  <li><a href="http://www.naver.com" target="_blank">네이버(새윈도우)</a></li>
+		  <li><a href="https://KDG555.github.io/basicSemantic3.html">홈</a></li>
+		  <li><a href="#chapter1">제1장이동(북마크이동)</a></li></ul>
+	</nav>
 <section>    <!--   main  -->
   <section><h3 id="chapter1">오늘의 교통상황</h3>
     <p>오늘의 교통상황을 비디오로 제공합니다.  장소는 대한민국 만세로 입니다.  
@@ -42,9 +34,9 @@
 	하지만, 다행히도 사고는 발생하지 않았습니다.  아래가 교통상황 입니다. </p>
     <h4>만세로 교통상황 </h4>
     <video id="traffic" controls="controls">
-      <source src="../audio/audio/traffic.mp4" type="audio/mp4">
-      <source src="../audio/audio/boom.ogg" type="audio/ogg">
-      <source src="../audio/audio/boom.webm" type="audio/webm">
+      <source src="../media/traffic.mp4" type="video/mp4">
+      <source src="../media/boom.ogg" type="video/ogg">
+      <source src="../media/boom.webm" type="video/webm">
           브라우저가 지원하지 않거나 비디오 형식의 파일이 존재하지 않습니다!!!     </video><hr/>
   </section>    
 </section>    <!--   /main  -->
