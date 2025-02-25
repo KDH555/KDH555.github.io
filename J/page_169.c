@@ -91,6 +91,32 @@ int insert(Node ** head, int index, char * str)
 
 int delete(Node ** head, int index)
 {
+	if (*head == NULL)
+	{
+		return -1;
+	}
+	else if (index == 0)
+	{
+		Node * node = *head;
+		*head = node->link;
+		free(node);
+	}
+	else
+	{
+		Node * current = *head;
+		Node * prev = NULL;
+		for (int i=0; i<index; i++);
+		{
+			if(current == NULL)
+			{
+				return -1;
+			}
+			prev = current;
+			current = current->link;
+		}
+		prev->link = current->link;
+		free(current);
+	}
 	return 0;
 }
 
@@ -106,7 +132,9 @@ int main()
 	insert(&head, 1, "Thu");
 	print(head);
 
-   // delete(head);
+    delete(&head, 2);
+	print(head);
+
     clear(&head);
 	print(head);
 
