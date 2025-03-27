@@ -30,3 +30,13 @@ model.summary()
 model.compile(optimizer='adam', loss="binary_crossentropy", metrics=['accuracy'])
 model.fit(x=X_train, y=y_train, epochs=1_000, verbose='auto')
 print(f"예측 정확도 : {model.evaluate(x=X_test, y=y_test)}") # 첫 번째 값(손실값, loss) / 두 번째 값(정확도, accuracy)
+
+import matplotlib.pyplot as plt
+
+# 정확도 그래프 시각화
+history = model.fit(x=X_train, y=y_train, epochs=1000, verbose=0)
+plt.plot(history.history['accuracy'], label='accuracy')
+plt.xlabel('epoch')
+plt.ylabel('Accuracy')
+plt.legend(loc='lower right')
+plt.show()
