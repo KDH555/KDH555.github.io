@@ -25,7 +25,7 @@ def upload_image():
     prediction = model.predict(image)
     class_index = np.argmax(prediction)
 
-    # 사람 인식 여부에 따라 LED 제어
+    # 인식 여부에 따라 LED 제어
     handle_prediction(class_index)
 
 def handle_prediction(class_index):
